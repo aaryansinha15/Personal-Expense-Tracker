@@ -1,0 +1,28 @@
+personal_expense_tracker/
+│
+├── main.py                # Entry point for the application
+│
+├── data/                  # Stores all persistent data
+│   ├── expenses.json      # File to store expenses
+│   ├── categories.json    # File to store categories (optional)
+│
+├── utils/                 # Helper functions and modules
+│   ├── file_operations.py # Functions to read/write data
+│   ├── input_validation.py # Functions to validate user inputs
+│   ├── summary.py         # Functions to calculate summaries
+│
+├── views/                 # For handling console interface
+│   ├── menu.py            # Main menu display logic
+│   ├── display.py         # Functions for printing data in tables or lists
+│
+├── tests/                 # Testing files
+│   ├── test_file_ops.py   # Tests for file operations
+│   ├── test_summary.py    # Tests for summary calculations
+│
+├── docs/                  # Documentation files
+│   ├── README.md          # Main project description
+│   ├── INSTALLATION.md    # Guide to run the project
+│
+├── requirements.txt       # Dependencies for the project
+│
+└── LICENSE                # Optional: License for your project  based on this give me code 
