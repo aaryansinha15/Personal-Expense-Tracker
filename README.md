@@ -21,27 +21,8 @@ This project demonstrates Python concepts like file handling, modular programmin
 
 ## 📂 Project Structure
 
-personal_expense_tracker/
-│
-├── main.py                # Entry point for the application
-│
-├── data/                  # Stores all persistent data
-│   ├── expenses.json      # JSON file to store expenses
-│
-├── utils/                       # Helper functions and modules
-│   ├── file_operation_file.py   # Functions for reading and writing data
-│   ├── summary.py               # Functions to calculate summaries
-│
-├── views/                 # Handles console interface
-│   ├── menu.py            # Main menu display logic
-│
-├── tests/                 # Testing files
-│   ├── test_file_ops.py   # Unit tests for file operations
-│
-├── docs/                  # Documentation files
-│   ├── README.md          # Main project description
-│
-├── requirements.txt       # Dependencies for the project
+![image](https://github.com/user-attachments/assets/c250e582-e314-42a7-846d-891ecdcd1e7d)
+
 
 ## 🔨 To Run the Application
     python main.py
