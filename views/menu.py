@@ -102,3 +102,5 @@ def set_theme(color):
 
 def print_colored(text):
     print(THEME + text)
+
+    # changes done 
