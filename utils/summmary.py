@@ -15,3 +15,5 @@ def calculate_category_summary(directory):
         category = expense['category']
         summary[category]= summary.get(category,0)+expense['amount']
     return summary
+
+# changes done
