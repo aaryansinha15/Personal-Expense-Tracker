@@ -1,3 +1,6 @@
+# importing the library from the the other python files of the directory. 
+# libraries that are not installed are imported and installed using the requirement text file. 
+
 from utils.file_operation_file import read, write
 from utils.validation_file import validate_file
 from utils.summmary import calculate_total_expenses,calculate_category_summary
@@ -8,10 +11,12 @@ THEME = Fore.WHITE
 # initializing colorama
 init(autoreset= True)
 
+# json files are referenced here to use it. 
+
 EXPENSE_FILE="data\\expenses.json"
 CATEGORIES_FILE="data\\categories.json"
 
-init(autoreset=True)
+ 
 
 def print_header(title):
     print(Fore.CYAN + Style.BRIGHT + f"\n{'-' * 40}")
@@ -21,6 +26,7 @@ def print_header(title):
 def print_divider():
     print(Fore.MAGENTA + '-'*40)
 
+# the diplay function is created with the necessary menues of the program and choice
 
 def display_menu():
     print("====================================")
@@ -31,7 +37,8 @@ def display_menu():
     print(Fore.BLUE +"3.View Summary")
     print(Fore.RED+"4. Move Out")
     print_divider()
-    choice = input(Fore.CYAN +"Enter your choice")
+    
+    choice = int(input(Fore.CYAN +"Enter your choice "))
 
     if choice == 1:
         expense_add()
@@ -47,10 +54,11 @@ def display_menu():
 
 
 
-# fucntion definition 
+# fucntion definition of the above choices 
 def expense_add():
         
-        category = input("Enter your category")
+        category = input("Enter your category in respect to the below category")
+        print("Food", "Travel","Bills","Investment","Miscellaneous")
         amount = validate_file(input("Enter the amount for the "))
 
         if amount is not None:
@@ -65,19 +73,18 @@ def expense_view():
         data = read(EXPENSE_FILE)
         print("\n---EXPENSES---")
         for idx, expense in enumerate(data,1):
-            print(f"{idx}.{expense['category']}: Rs{expense['amoumt']}")
+            print(f"{idx}.{expense['category']}: Rs {expense['amount']}")
 
 
 def expense_summary():
         total = calculate_total_expenses(EXPENSE_FILE)
         summary = calculate_category_summary(EXPENSE_FILE)
         print("\n---Summary---")
-        print(f"Total Expenses: Rs{total}")
+        print(f'Total Expenses: Rs {total}' )
         for category,amount in summary.items():
-            print(f"{category}:Rs{amount}")
+            print(f"{category}: Rs {amount}")
 
-
-# user input to select the choice
+# colorlama function for making the user show that data is being loaded. 
 
 def show_loading(message= "Processing"):
     print(Fore.YELLOW + message,end="")
@@ -86,6 +93,7 @@ def show_loading(message= "Processing"):
         print(Fore.YELLOW + ".", end = "")
     print("\n")
 
+#  setting up the theme 
 
 def set_theme(color):
     global THEME
@@ -94,8 +102,3 @@ def set_theme(color):
 
 def print_colored(text):
     print(THEME + text)
-
-        
-
-
-    

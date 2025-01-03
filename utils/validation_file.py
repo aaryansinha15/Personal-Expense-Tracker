@@ -1,3 +1,4 @@
+# Validate file to check if input amount is positive value or not. 
 def validate_file(input_value):
     try:
         value= float(input_value)
